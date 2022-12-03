@@ -15,4 +15,6 @@ module "ApiGateway" {
   source = "./modules/ApiGateway"
   lambda_consultar_name = module.Lambda.lambda_consulta_arn
   lambda_inserir_name = module.Lambda.lambda_inserir_arn
+  lambda_consultar_gw = module.Lambda.lambda_consulta_name
+  lambda_inserir_gw = module.Lambda.lambda_inserir_name
 }

@@ -3,7 +3,6 @@ resource "aws_iam_role" "role_for_LDC" {
   assume_role_policy = file("assume_role_policy.json")
 }
 
-
 resource "aws_iam_role_policy" "lambda_policy" {
   name = "lambda_policy"
   role = aws_iam_role.role_for_LDC.id
